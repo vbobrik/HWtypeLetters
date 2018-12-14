@@ -2,6 +2,8 @@ import java.io.Console;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.io.File;
 
 public class Messages {
     private String error;
@@ -27,7 +29,6 @@ public class Messages {
         do {
 
             letter = a.nextLine();
-            System.out.println("Print " + letter);
             switch (letter) {
                 case "1":
                     System.out.println("Please, input any English letter");
@@ -36,44 +37,37 @@ public class Messages {
                     System.out.println("Please, input text for next step");
                     break;
                 default:
-                    System.out.println("NOoo");
+                    System.out.println("Whoooops!\nIt's not correct enter");
                     break;
             }
         } while (!letter.equals("1") && !letter.equals("2"));
-    }
 
-//        Scanner in = new Scanner(System.in);
-//        try {
-//            input = in.nextInt();
-//        } catch (Exception ex)
-//        {
-//            input = in.nextInt();
-//        }
+        String text = a.nextLine();
+        System.out.println("You entered " + text);
 
-
-//
-//        if(console!=null)
-//            String name = console.readLine("Name: ");
-//        String input;
-//        System.out.print("Please enter user name : ");
-//        String username = null;
-//        input = System.in.;
-//        if (letter = 1)
-//            System.out.println("Please, input text for next step");
-
-    }
-
-
-
-
-
-
-       /* try {
-            if (letter >= "a" & letter <= "z") {
-                System.out.println();
-            } else System.out.println("Woooops!\nIt's doesn't look letter" + 0x263A);
-        } catch (IOException ioe) {
-            System.out.println();
+       /* File file = new File("D:\MY\HWtypeLetters\src\resources\words.txt");
+        Scanner scan = new Scanner(file);
+        while(scan.hasNextLine()) {
+            System.out.println(scan.next());
         }*/
 
+
+        String x = a.nextLine();
+        String [] savedText = text.split( " ");
+        for(int i = 0; i < savedText.length; i ++) {
+            System.out.println(savedText[i]);
+            if(savedText[i].contains(x)) {
+                //System.out.println("Finded words " + savedText[i];
+                System.out.println("Finded words " + Arrays.asList(savedText));
+            }
+        }
+
+
+    }
+
+    public void findLetter() {
+
+    }
+
+}
 

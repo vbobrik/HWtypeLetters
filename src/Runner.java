@@ -7,6 +7,7 @@ public class Runner {
         Messages mess = new Messages();
         mess.startMessage();
         mess.typeLetter();
+        mess.findLetter();
     }
 
     /*public void typeLetter() {
