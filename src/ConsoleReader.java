@@ -29,6 +29,8 @@ private String text;
                 System.out.println("Whoops!\nMatches are absent!");
             }
         }
+    System.out.println("--------------*****---------");
+    startMessage();
 
     }
 

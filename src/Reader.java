@@ -8,8 +8,13 @@ public abstract class Reader {
     private String text;
     Scanner a = new Scanner(System.in);
 
+    public void startMessage() {
+        System.out.println("Select point from the list, please:\n" +
+                "1. Read from file\n" +
+                "2. Read from console");
+    }
 
-     public abstract void findLetter();
+    public abstract void findLetter();
 
     public void typeLetter() throws FileNotFoundException {
         //this.a.nextLine();
@@ -39,7 +44,7 @@ public abstract class Reader {
                     System.out.println("Whoooops!\nIt's not correct enter");
                     break;
             }
-        } while (!letter.equals("1") && !letter.equals("2"));
+        } while (!a.nextLine().equals("exit"));
 
         //   FileReader f1 = new FileReader("/Users/Valentina/IdeaProjects/HWtypeLetters/resources/class.txt");
         //BufferedReader b = new BufferedReader(f1);
